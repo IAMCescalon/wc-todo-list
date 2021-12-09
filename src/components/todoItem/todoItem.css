@@ -1,0 +1,8 @@
+slot {
+  display: inline-block;
+}
+
+.doneButton {
+  display: inline-block;
+  margin-left: 20px;
+}

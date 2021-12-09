@@ -16,8 +16,13 @@ class TodoList extends HTMLElement {
       .getElementById("addButton")
       .addEventListener("click", () => {
         const textField = this.shadowRoot.getElementById("todoField");
-        const listElement = document.createElement("li");
-        listElement.innerText = textField.value;
+        const listElement = document.createElement("todo-item");
+
+        const slot = document.createElement("span");
+        slot.innerText = textField.value;
+        slot.setAttribute("slot", "todo-content");
+        listElement.appendChild(slot);
+
         this.shadowRoot.getElementById("todoList").appendChild(listElement);
         textField.value = "";
         textField.focus();

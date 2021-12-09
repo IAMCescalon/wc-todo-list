@@ -1,6 +1,8 @@
 import appTemplate from "./appContainer.html";
 
+import "./appContainer.css";
 import "../todoList/todoList";
+import "../todoItem/todoItem";
 
 class AppContainer extends HTMLElement {
   constructor() {
